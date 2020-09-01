@@ -281,7 +281,7 @@ app.post('/api/products', async (req,res)=>{
   for(var i=0;i<Object.values(req.files).length;i++){
       var photo = Object.values(req.files)[i];
       photo.mv(path.join('images',Object.values(req.files)[i].name));
-      photoLinks += process.env.prederredPrefix + path.join('images',Object.values(req.files)[i].name);
+      photoLinks += process.env.PREFIX + path.join('images',Object.values(req.files)[i].name);
   }
   
 
