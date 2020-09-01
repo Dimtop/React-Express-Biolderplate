@@ -59,23 +59,6 @@ app.use(bodyParser.json());
 
 //DELETE
 
-app.post("/api/products/delete", async(req,res)=>{
-  var connection = await pool.getConnection();
- 
-  var rows = await connection.query("DELETE FROM Products WHERE id='" + req.body.id + "';");
-
-  connection.end()
-  res.send({categories:rows});
-});
-
-app.post("/api/users/delete", async(req,res)=>{
-  var connection = await pool.getConnection();
- 
-  var rows = await connection.query("DELETE FROM Users WHERE id='" + req.body.id + "';");
-
-  connection.end()
-  res.send({categories:rows});
-});
 
 
 //GET
@@ -234,6 +217,25 @@ app.get('/api/roles',async (req,res)=>{
 });
 
 //POST 
+app.post("/api/products/delete", async(req,res)=>{
+  var connection = await pool.getConnection();
+ 
+  var rows = await connection.query("DELETE FROM Products WHERE id='" + req.body.id + "';");
+
+  connection.end()
+  res.send({products:rows});
+});
+
+app.post("/api/users/delete", async(req,res)=>{
+  var connection = await pool.getConnection();
+ 
+  var rows = await connection.query("DELETE FROM Users WHERE id='" + req.body.id + "';");
+
+  connection.end()
+  res.send({users:rows});
+});
+
+
 app.post('/api/login', async(req,res)=>{
 
   var connection = await pool.getConnection();
