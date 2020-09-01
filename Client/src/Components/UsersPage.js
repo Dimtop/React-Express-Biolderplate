@@ -198,7 +198,7 @@ handleDelete(e){
     var id = e.target.id.replace("delete","");
 
     if(confirm("Θέλετε να διαγράψετε τον χρήστη οριστικά;")){
-        fetch("/api/users/delete",{
+        fetch("/api/delete/user",{
             method:"POST",  
             headers : { 
             'Content-Type': 'application/json',
