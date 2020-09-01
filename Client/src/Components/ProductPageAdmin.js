@@ -21,6 +21,8 @@ import Cookies from 'js-cookie';
 
 import { withRouter } from 'react-router';
 
+import Filters from './Filters';
+
 class ProductPageAdmin extends React.Component{
 
 
@@ -63,6 +65,8 @@ class ProductPageAdmin extends React.Component{
         this.handleNameChange = this.handleNameChange.bind(this);
         this.handleCodeChange = this.handleCodeChange.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
+
+        this.filterProducts = this.filterProducts.bind(this);
     }
 
 
@@ -601,6 +605,11 @@ class ProductPageAdmin extends React.Component{
        }
 
 
+       filterProducts(productsFiltered){
+            this.setState({userProducts:productsFiltered});
+       }
+
+
 
     render(){
 
@@ -608,7 +617,8 @@ class ProductPageAdmin extends React.Component{
        
         return(
 
-        
+            <>
+                <Filters filterProducts={this.filterProducts}/>
                 <div class="row">
                       {this.state.userProducts.map(function(e,i){
                         
@@ -805,6 +815,7 @@ class ProductPageAdmin extends React.Component{
                         
                  
                 </div>
+                </>
           
         );
     }

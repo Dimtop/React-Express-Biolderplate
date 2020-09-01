@@ -224,7 +224,7 @@ import {
             }
     
             this.setState({subcategoriesToRender:subcategoriesToRender});
-        });     
+        });                                                                                                      
         
       
     }  
