@@ -51,7 +51,7 @@ class Header extends React.Component{
                             <nav id="header">
                                 <div className="nav-wrapper">
                                 <img  className="brand-logo" id="logo" src="/public/media/logo.png" />
-                                    <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
+                                    <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i style={{color:"black"}} className="material-icons">menu</i></a>
                                     <ul className="right hide-on-med-and-down">
                                     <li><a href="/" className="menuItem" onClick={this.clearCookies}>Logout</a></li>
                                     <li><a href="/dashboard" className="menuItem">Dashboard</a></li>
@@ -60,7 +60,8 @@ class Header extends React.Component{
                             </nav>
 
                             <ul className="sidenav" id="mobile-demo">
-                                <li><a href="#" className="menuItem">Login</a></li>  
+                                <li><a href="/" className="menuItem">Login</a></li>  
+                                <li><a href="/dashboard" className="menuItem">Dashboard</a></li>  
                             </ul>
                         </>
 
