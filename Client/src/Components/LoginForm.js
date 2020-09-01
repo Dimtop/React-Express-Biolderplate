@@ -75,8 +75,8 @@ class LoginForm extends React.Component{
         return(
             this.state.loggedIn?this.state.redirectComponent:
             <div className="row ">
-                <div className="col s12 m4"></div>
-                <div className="col s12 m4" style={{marginTop:"10rem"}}>
+                <div className="col s12 l4"></div>
+                <div className="col s12 l4" style={{marginTop:"10rem"}}>
                     <div className="card" id="loginFormContainer">
                         <div className="card-content white-text">
                             <div className="card-content white-text">

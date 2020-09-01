@@ -44,12 +44,12 @@ dotenv.config();
 app.use(cors());
 app.use(cookieParser());
 app.use(fileUpload());
-console.log(path.join(__dirname, "../Client/public"));
+
 app.use(express.static(path.join(__dirname, "../Client/dist")));
-app.use(express.static(path.join(__dirname, "../Client/public")));
-app.use(express.static(path.join(__dirname, "../Client/public/js")));
-app.use(express.static(path.join(__dirname, "../Client/public/media")));
-app.use(express.static(path.join(__dirname, "../Client/public/styles")));
+//app.use(express.static(path.join(__dirname, "../Client/public")));
+app.use(express.static(path.join(__dirname, "../Client/dist/js")));
+app.use(express.static(path.join(__dirname, "../Client/dist/media")));
+app.use(express.static(path.join(__dirname, "../Client/dist/styles")));
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
  
@@ -57,7 +57,29 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
+//DELETE
+
+app.delete("/api/products", async(req,res)=>{
+  var connection = await pool.getConnection();
+ 
+  var rows = await connection.query("DELETE FROM Products WHERE id='" + req.body.id + "';");
+
+  connection.end()
+  res.send({categories:rows});
+});
+
+app.delete("/api/users", async(req,res)=>{
+  var connection = await pool.getConnection();
+ 
+  var rows = await connection.query("DELETE FROM Users WHERE id='" + req.body.id + "';");
+
+  connection.end()
+  res.send({categories:rows});
+});
+
+
 //GET
+
 app.get('/products', (req, res) => {
 
 
@@ -79,13 +101,7 @@ app.get('/users/new', (req, res) => {
   
 
 });
-app.get('/products', (req, res) => {
 
-
-  res.sendFile(path.join(__dirname, "../Client/dist","index.html"));
-
-
-});
 app.get('/products/new', (req, res) => {
 
 
