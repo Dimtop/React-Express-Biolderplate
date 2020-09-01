@@ -123,7 +123,7 @@ class Filters extends React.Component {
     }
 
     fetchFilteredProducts(){
-        fetch("/api/filter/products?categories="+this.state.selectedCategoriesFilters.join("|") + "&subcategories=" + this.state.selectedSubategoriesFilters.join("|"),{
+        fetch("/api/filter?categories="+this.state.selectedCategoriesFilters.join("|") + "&subcategories=" + this.state.selectedSubategoriesFilters.join("|"),{
             method:"GET",  
             headers : { 
             'Content-Type': 'application/json',

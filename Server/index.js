@@ -218,7 +218,7 @@ app.get('/api/roles',async (req,res)=>{
 });
 
 
-app.get("/api/products/filter",async (req,res)=>{
+app.get("/api/filter",async (req,res)=>{
   var connection = await pool.getConnection();
 
   var categories = req.query.categories.split("|");
