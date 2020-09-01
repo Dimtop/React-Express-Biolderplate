@@ -1,0 +1,90 @@
+Date : 2020-09-01 13:59:06
+Directory : c:\Users\Softexpert\Desktop\fotosxoliki
+Total : 46 files,  18672 codes, 143 comments, 1290 blanks, all 20105 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JSON       |          5 |     16,023 |          0 |          5 |     16,028 |
+| JavaScript |         35 |      2,540 |        124 |      1,235 |      3,899 |
+| CSS        |          3 |         70 |          0 |         29 |         99 |
+| HTML       |          1 |         19 |          2 |          5 |         26 |
+| Markdown   |          1 |         18 |          0 |         14 |         32 |
+| TypeScript |          1 |          2 |         17 |          2 |         21 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                        | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                           |         46 |     18,672 |        143 |      1,290 |     20,105 |
+| Client                                                                                      |         25 |      9,515 |        127 |        934 |     10,576 |
+| Client\dist                                                                                 |          4 |         55 |         51 |         20 |        126 |
+| Client\dist\js                                                                              |          1 |          6 |          5 |          4 |         15 |
+| Client\dist\styles                                                                          |          1 |         22 |          0 |         11 |         33 |
+| Client\public                                                                               |          2 |         30 |          5 |         13 |         48 |
+| Client\public\js                                                                            |          1 |          6 |          5 |          4 |         15 |
+| Client\public\styles                                                                        |          1 |         24 |          0 |          9 |         33 |
+| Client\src                                                                                  |         13 |      1,932 |         52 |        877 |      2,861 |
+| Client\src\Components                                                                       |         12 |      1,925 |         52 |        871 |      2,848 |
+| Server                                                                                      |         20 |      9,154 |         16 |        355 |      9,525 |
+| Server\middlewares                                                                          |         13 |        264 |          0 |        136 |        400 |
+| Server\model                                                                                |          2 |         53 |          0 |         11 |         64 |
+| Server\public                                                                               |          2 |         30 |          5 |         13 |         48 |
+| Server\public\js                                                                            |          1 |          6 |          5 |          4 |         15 |
+| Server\public\styles                                                                        |          1 |         24 |          0 |          9 |         33 |
++---------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                    | language   | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\Users\Softexpert\Desktop\fotosxoliki\Client\dist\bundle.js                               | JavaScript |          8 |         44 |          0 |         52 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Client\dist\index.html                              | HTML       |         19 |          2 |          5 |         26 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Client\dist\js\componentsInit.js                    | JavaScript |          6 |          5 |          4 |         15 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Client\dist\styles\mainStyle.css                    | CSS        |         22 |          0 |         11 |         33 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Client\index.d.ts                                   | TypeScript |          2 |         17 |          2 |         21 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Client\index.js                                     | JavaScript |          3 |          0 |          2 |          5 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Client\package-lock.json                            | JSON       |      7,412 |          0 |          1 |      7,413 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Client\package.json                                 | JSON       |         39 |          0 |          1 |         40 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Client\public\js\componentsInit.js                  | JavaScript |          6 |          5 |          4 |         15 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Client\public\styles\mainStyle.css                  | CSS        |         24 |          0 |          9 |         33 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Client\readme.md                                    | Markdown   |         18 |          0 |         14 |         32 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Client\src\Components\AdminDashboard.js             | JavaScript |         81 |          0 |         32 |        113 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Client\src\Components\App.js                        | JavaScript |         71 |         11 |         31 |        113 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Client\src\Components\Dashboard.js                  | JavaScript |         38 |          0 |         22 |         60 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Client\src\Components\Header.js                     | JavaScript |         48 |          0 |         28 |         76 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Client\src\Components\LoginForm.js                  | JavaScript |         98 |          0 |         36 |        134 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Client\src\Components\ProductEntryForm.js           | JavaScript |        340 |          1 |        149 |        490 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Client\src\Components\ProductPageAdmin.js           | JavaScript |        538 |         22 |        258 |        818 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Client\src\Components\ProductPageUser.js            | JavaScript |        226 |          6 |         87 |        319 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Client\src\Components\ProductsPage.js               | JavaScript |         41 |          1 |         23 |         65 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Client\src\Components\UserDashboard.js              | JavaScript |         48 |          0 |         22 |         70 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Client\src\Components\UserEntryForm.js              | JavaScript |        157 |          3 |         70 |        230 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Client\src\Components\UsersPage.js                  | JavaScript |        239 |          8 |        113 |        360 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Client\src\index.js                                 | JavaScript |          7 |          0 |          6 |         13 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Client\webpack.config.js                            | JavaScript |         24 |          2 |          4 |         30 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Server\index.js                                     | JavaScript |        238 |         11 |        193 |        442 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Server\middlewares\fetchCategoriesMiddleware.js     | JavaScript |         15 |          0 |          5 |         20 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Server\middlewares\fetchPositionsMiddleware.js      | JavaScript |         15 |          0 |          5 |         20 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Server\middlewares\fetchProductsMiddleware.js       | JavaScript |         15 |          0 |          5 |         20 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Server\middlewares\fetchRolesMiddleware.js          | JavaScript |         15 |          0 |          8 |         23 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Server\middlewares\fetchSubcateogoriesMiddleware.js | JavaScript |         15 |          0 |          5 |         20 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Server\middlewares\fetchUsersMiddleware.js          | JavaScript |         15 |          0 |          5 |         20 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Server\middlewares\loginMiddleware.js               | JavaScript |         42 |          0 |         22 |         64 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Server\middlewares\newProductMiddleware.js          | JavaScript |         31 |          0 |         13 |         44 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Server\middlewares\newUserMiddleware.js             | JavaScript |         22 |          0 |         16 |         38 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Server\middlewares\parsePositionsMiddleware.js      | JavaScript |         17 |          0 |          8 |         25 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Server\middlewares\updateProductMiddleware.js       | JavaScript |         24 |          0 |         18 |         42 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Server\middlewares\updateReserveMiddleware.js       | JavaScript |         16 |          0 |          9 |         25 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Server\middlewares\updateUserMiddleware.js          | JavaScript |         22 |          0 |         17 |         39 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Server\model\Customer.js                            | JavaScript |         53 |          0 |         10 |         63 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Server\model\Role.js                                | JavaScript |          0 |          0 |          1 |          1 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Server\package-lock.json                            | JSON       |      8,524 |          0 |          1 |      8,525 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Server\package.json                                 | JSON       |         45 |          0 |          1 |         46 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Server\public\js\componentsInit.js                  | JavaScript |          6 |          5 |          4 |         15 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\Server\public\styles\mainStyle.css                  | CSS        |         24 |          0 |          9 |         33 |
+| c:\Users\Softexpert\Desktop\fotosxoliki\package-lock.json                                   | JSON       |          3 |          0 |          1 |          4 |
+| Total                                                                                       |            |     18,672 |        143 |      1,290 |     20,105 |
++---------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

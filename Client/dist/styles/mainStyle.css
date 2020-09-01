@@ -9,7 +9,7 @@ body,html,#root,#root>div{
 }
 
 #logo{
-
+    height: 5rem;
 }
 
 .menuItem{
