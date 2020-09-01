@@ -47,6 +47,7 @@ class UsersPage extends React.Component{
         this.handleNameChange = this.handleNameChange.bind(this);
         this.handleNicknameChange = this.handleNicknameChange.bind(this);
         this.handlePasswordChange = this.handlePasswordChange.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
 
     }
 
@@ -191,6 +192,38 @@ handlePasswordChange(e){
     this.setState({usersFetched:usersMutated});
 }
 
+handleDelete(e){
+
+
+    var id = e.target.id.replace("delete","");
+
+    if(confirm("Θέλετε να διαγράψετε τον χρήστη οριστικά;")){
+        fetch("/api/users",{
+            method:"DELETE",  
+            headers : { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body:(
+            JSON.stringify({id:id})
+        )
+        })
+        .then(res => res.json())
+        .then(res => {
+            console.log(res);
+        //  this.setState({products:res.products}, () =>{
+            //   console.log(res);
+            
+        // });
+          location.reload();
+          
+        });
+    
+    }
+    
+   }
+
+
 
 
 
@@ -279,7 +312,13 @@ handlePasswordChange(e){
                                                             ΑΠΟΘΗΚΕΥΣΗ
                                                         </button>
                                                     </div>
+                                                    <div className="input-field col s12" style={{textAlign:"center"}}>
+                                                            <button className="btn waves-effect waves-light" style={{backgroundColor:"red"}} type="submit" name="action" id={"delete" + e.id} onClick={this.handleDelete}>
+                                                                ΔΙΑΓΡΑΦΗ
+                                                            </button>
+                                                        </div>
                                                 </div>
+
                                         
 
                                         

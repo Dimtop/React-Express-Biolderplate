@@ -126,7 +126,8 @@ import {
             //   console.log(res);
             
         // });
-            location.reload();
+        alert("Ο χρήστης καταχωρήθηκε με επιτυχία!");
+        location.replace("/products/new");
         });
     }
     

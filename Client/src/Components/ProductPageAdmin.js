@@ -58,6 +58,7 @@ class ProductPageAdmin extends React.Component{
         this.handleUserSelection = this.handleUserSelection.bind(this);
         this.handleNameChange = this.handleNameChange.bind(this);
         this.handleCodeChange = this.handleCodeChange.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
     }
 
 
@@ -564,6 +565,39 @@ class ProductPageAdmin extends React.Component{
 
 
 
+    handleDelete(e){
+
+
+        var id = e.target.id.replace("delete","");
+    
+        if(confirm("Θέλετε να διαγράψετε το προϊόν οριστικά;")){
+            fetch("/api/products",{
+                method:"DELETE",  
+                headers : { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body:(
+                JSON.stringify({id:id})
+            )
+            })
+            .then(res => res.json())
+            .then(res => {
+                console.log(res);
+            //  this.setState({products:res.products}, () =>{
+                //   console.log(res);
+                
+            // });
+              location.reload();
+              
+            });
+        
+        }
+        
+       }
+
+
+
     render(){
 
         console.log(this.state.userProducts);
@@ -744,6 +778,14 @@ class ProductPageAdmin extends React.Component{
                                                         <div className="input-field col s12" style={{textAlign:"center"}}>
                                                             <button className="btn waves-effect waves-light" type="submit" name="action" id={e.id} onClick={this.handleReserveChange}>
                                                                 ΑΠΟΘΗΚΕΥΣΗ
+                                                            </button>
+                                                        </div>
+                                                    </div>
+
+                                                    <div className="row">
+                                                        <div className="input-field col s12" style={{textAlign:"center"}}>
+                                                            <button className="btn waves-effect waves-light" style={{backgroundColor:"red"}} type="submit" name="action" id={"delete" + e.id} onClick={this.handleDelete}>
+                                                                ΔΙΑΓΡΑΦΗ
                                                             </button>
                                                         </div>
                                                     </div>

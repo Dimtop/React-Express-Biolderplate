@@ -28,6 +28,7 @@ class ProductPageUser extends React.Component{
         this.parsePhotoLink = this.parsePhotoLink.bind(this);
         this.parsePositions = this.parsePositions.bind(this);
         this.handleReserveChange = this.handleReserveChange.bind(this);
+
     }
 
 
@@ -168,11 +169,15 @@ class ProductPageUser extends React.Component{
                 //   console.log(res);
                 
             // });
-                location.reload();
+              location.reload();
+              
             });
         });
 
    }
+
+
+
 
 
 
@@ -285,6 +290,8 @@ class ProductPageUser extends React.Component{
                                                             </button>
                                                         </div>
                                                     </div>
+
+                                                
                                                                 
                                         </div>
                                 

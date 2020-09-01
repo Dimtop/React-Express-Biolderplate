@@ -297,7 +297,10 @@ import {
         })
         .then(res => res.json())
         .then(res => {
-            location.reload();
+            alert("Το προϊόν σας καταχωρήθηκε με επιτυχία!");
+                location.replace("/products/new");
+
+            
            
 
          
