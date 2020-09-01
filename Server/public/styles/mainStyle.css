@@ -1,0 +1,33 @@
+body,html,#root,#root>div{
+    height: 100vh;
+}
+
+#header{
+    padding:1rem;
+    height: 8rem;
+    background-color: #f4f4f4!important;
+}
+
+#logo{
+    height: 6rem;
+}
+
+.menuItem{
+    color:black;
+}
+
+#productFormContainer{
+    margin-top: 5rem;
+}
+
+
+
+.errorMessage{
+
+    color:red;
+}
+
+.dashboardButton{
+    width: 80%;
+    height: 3rem;
+}
