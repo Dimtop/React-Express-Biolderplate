@@ -220,7 +220,7 @@ app.get('/api/roles',async (req,res)=>{
 app.post("/api/delete/user", async(req,res)=>{
   var connection = await pool.getConnection();
  
-  var rows = await connection.query("DELETE FROM Users WHERE id=" + req.body.id + ";");
+  var rows = await connection.query("DELETE FROM Users WHERE id=" + req.body.id );
 
   connection.end()
   res.send({products:rows});
@@ -229,7 +229,7 @@ app.post("/api/delete/user", async(req,res)=>{
 app.post("/api/delete/product", async(req,res)=>{
   var connection = await pool.getConnection();
  
-  var rows = await connection.query("DELETE FROM Products WHERE id=" + req.body.id + ";");
+  var rows = await connection.query("DELETE FROM Products WHERE id=" + req.body.id);
 
   connection.end()
   res.send({users:rows});
