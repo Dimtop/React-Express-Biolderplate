@@ -9,6 +9,8 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import Cookies from 'js-cookie';
 
+import { withRouter } from 'react-router';
+
 class ProductPageUser extends React.Component{
 
 
@@ -22,6 +24,7 @@ class ProductPageUser extends React.Component{
             
         }
 
+        this.props.history.push("/products");
 
         this.fetchProducts = this.fetchProducts.bind(this);
         this.parseProducts = this.parseProducts.bind(this);
@@ -311,6 +314,6 @@ class ProductPageUser extends React.Component{
 
 
 
-export default ProductPageUser;
+export default withRouter(ProductPageUser);
 
 // <img src={e.photo.split("|")[0].split("").map(e=>e==","?"\\":e).join("")}/>

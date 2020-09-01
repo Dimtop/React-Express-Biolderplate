@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-
+import { withRouter } from 'react-router';
 
 import {
     Redirect
@@ -18,6 +18,8 @@ class AdminDashboard extends React.Component{
             shouldRedirect:false,
             redirectComponent:<></>
         };
+
+        this.props.history.push("/dashboard");
 
 
         this.redirectToProductsPage = this.redirectToProductsPage.bind(this);
@@ -108,4 +110,4 @@ class AdminDashboard extends React.Component{
 
 
 
-export default AdminDashboard;
+export default  withRouter(AdminDashboard);

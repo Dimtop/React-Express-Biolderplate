@@ -5,7 +5,7 @@ import ReactDom from 'react-dom';
 import {
     Redirect
   } from "react-router-dom";
-
+  import { withRouter } from 'react-router';
 
 class UserDashboard extends React.Component{
 
@@ -18,8 +18,12 @@ class UserDashboard extends React.Component{
             redirectComponent:<></>
         };
 
+        this.props.history.push("/dashboard");
+
         this.redirectToProductsPage = this.redirectToProductsPage.bind(this);
     }
+
+    
 
     redirectToProductsPage(){
         this.setState({shouldRedirect:true, redirectComponent:<Redirect to="products" />});
@@ -63,4 +67,4 @@ class UserDashboard extends React.Component{
 
 
 
-export default UserDashboard;
+export default withRouter(UserDashboard);

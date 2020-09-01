@@ -4,6 +4,9 @@ import {
     Redirect
   } from "react-router-dom";
 
+
+  import { withRouter } from 'react-router';
+
 class LoginForm extends React.Component{
 
 
@@ -18,6 +21,8 @@ class LoginForm extends React.Component{
             loggedIn:false,
             redirectComponent:<Redirect to="/dashboard" />
         };
+
+        this.props.history.push("/");
 
         this.loginPost = this.loginPost.bind(this);
         this.setStateNickname = this.setStateNickname.bind(this);
@@ -126,4 +131,4 @@ class LoginForm extends React.Component{
 
 
 
-export default LoginForm;
+export default withRouter(LoginForm);

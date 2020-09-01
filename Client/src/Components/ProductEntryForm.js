@@ -17,6 +17,9 @@ import {
    
   import Cookies from 'js-cookie';
 
+
+  import { withRouter } from 'react-router';
+
   class ProductEntryForm extends React.Component{
 
 
@@ -48,6 +51,8 @@ import {
             users:[],
             photo:[]
         };
+
+        this.props.history.push("/products/new");
 
         this.fetchUsers = this.fetchUsers.bind(this);
         this.fetchPositions = this.fetchPositions.bind(this);
@@ -482,4 +487,4 @@ import {
 
 
 
-export default ProductEntryForm;
+export default withRouter(ProductEntryForm);

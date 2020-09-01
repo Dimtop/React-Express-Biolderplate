@@ -19,6 +19,8 @@ import Chip from '@material-ui/core/Chip';
 
 import Cookies from 'js-cookie';
 
+import { withRouter } from 'react-router';
+
 class ProductPageAdmin extends React.Component{
 
 
@@ -38,6 +40,8 @@ class ProductPageAdmin extends React.Component{
             usersFetched:[]
             
         }
+
+        this.props.history.push("/products");
 
 
         this.fetchProducts = this.fetchProducts.bind(this);
@@ -808,7 +812,7 @@ class ProductPageAdmin extends React.Component{
 
 
 
-export default ProductPageAdmin;
+export default withRouter(ProductPageAdmin);
 
 // <img src={e.photo.split("|")[0].split("").map(e=>e==","?"\\":e).join("")}/>
 //  

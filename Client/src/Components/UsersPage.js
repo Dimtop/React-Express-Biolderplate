@@ -23,6 +23,8 @@ import {
     Redirect
   } from "react-router-dom";
 
+  import { withRouter } from 'react-router';
+
 
 class UsersPage extends React.Component{
 
@@ -36,6 +38,7 @@ class UsersPage extends React.Component{
             roleNames:[]
             
         }
+        this.props.history.push("/users");
 
 
 
@@ -351,7 +354,7 @@ handleDelete(e){
 
 
 
-export default UsersPage;
+export default withRouter(UsersPage);
 
 // <img src={e.photo.split("|")[0].split("").map(e=>e==","?"\\":e).join("")}/>
 //  

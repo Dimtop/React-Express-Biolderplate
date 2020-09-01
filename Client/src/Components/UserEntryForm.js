@@ -17,6 +17,9 @@ import {
   import Cookies from 'js-cookie';
 
 
+  import { withRouter } from 'react-router';
+
+
 
   class UserEntryForm extends React.Component{
 
@@ -34,6 +37,8 @@ import {
             role:"",
             rolesFetched:[]
         };
+
+        this.props.history.push("/users/new");
 
     
         this.fetchRoles = this.fetchRoles.bind(this);
@@ -222,4 +227,4 @@ import {
 
 
 
-export default UserEntryForm;
+export default withRouter(UserEntryForm);
