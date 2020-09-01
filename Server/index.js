@@ -59,7 +59,7 @@ app.use(bodyParser.json());
 
 //DELETE
 
-app.delete("/api/products", async(req,res)=>{
+app.post("/api/products/delete", async(req,res)=>{
   var connection = await pool.getConnection();
  
   var rows = await connection.query("DELETE FROM Products WHERE id='" + req.body.id + "';");
@@ -68,7 +68,7 @@ app.delete("/api/products", async(req,res)=>{
   res.send({categories:rows});
 });
 
-app.delete("/api/users", async(req,res)=>{
+app.post("/api/users/delete", async(req,res)=>{
   var connection = await pool.getConnection();
  
   var rows = await connection.query("DELETE FROM Users WHERE id='" + req.body.id + "';");

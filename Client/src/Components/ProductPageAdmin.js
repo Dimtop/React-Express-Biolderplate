@@ -571,8 +571,8 @@ class ProductPageAdmin extends React.Component{
         var id = e.target.id.replace("delete","");
     
         if(confirm("Θέλετε να διαγράψετε το προϊόν οριστικά;")){
-            fetch("/api/products",{
-                method:"DELETE",  
+            fetch("/api/products/delete",{
+                method:"POST",  
                 headers : { 
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
