@@ -11,6 +11,8 @@ import Cookies from 'js-cookie';
 
 import { withRouter } from 'react-router';
 
+import Filters from './Filters';
+
 class ProductPageUser extends React.Component{
 
 
@@ -31,6 +33,8 @@ class ProductPageUser extends React.Component{
         this.parsePhotoLink = this.parsePhotoLink.bind(this);
         this.parsePositions = this.parsePositions.bind(this);
         this.handleReserveChange = this.handleReserveChange.bind(this);
+
+        this.filterProducts = this.filterProducts.bind(this);
 
     }
 
@@ -181,7 +185,9 @@ class ProductPageUser extends React.Component{
 
 
 
-
+   filterProducts(productsFiltered){
+    this.setState({products:productsFiltered});
+    }
 
 
 
@@ -190,8 +196,9 @@ class ProductPageUser extends React.Component{
         console.log("Products: ");
         console.log(this.state.userProducts);
         return(
-
         
+            <>
+                <Filters filterProducts={this.filterProducts}/>
                 <div class="row">
                       {this.state.products.map(function(e){
                            
@@ -307,6 +314,8 @@ class ProductPageUser extends React.Component{
                         
                  
                 </div>
+
+                </>
           
         );
     }
