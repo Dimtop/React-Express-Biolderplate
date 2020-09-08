@@ -234,29 +234,32 @@ app.get("/api/filter",async (req,res)=>{
   var filteredProductsCat = [];
 
   for(var i=0;i<rows.length;i++){
-    console.log(rows[i].category.indexOf("Προσφορά"));
+  
     for(var y=0;y<categories.length;y++){
       if(rows[i].category.indexOf(categories[y])>=0){
+        //console.log(rows[i].category +" " + categories[y] + " " +rows[i].category.indexOf(categories[y]));
         filteredProductsCat.push(rows[i]);
       }
     }
   }
 
-  console.log(filteredProductsCat);
+console.log(filteredProductsCat);
 
   
   var filteredProductsSub = [];
 
   for(var i=0;i<filteredProductsCat.length;i++){
     for(var y=0;y<subcategories.length;y++){
+      console.log(filteredProductsCat[i].subcategory +" " + subcategories[y] + " " +filteredProductsCat[i].subcategory.indexOf(subcategories[y]));
       if(filteredProductsCat[i].subcategory.indexOf(subcategories[y])>=0){
-        filteredProductsSub.push(rows[i]);
+ 
+        filteredProductsSub.push(filteredProductsCat[i]);
       }
     }
   }
 
 
-  if(subcategories.length>0){
+  if(subcategories.length>0 || (subcategories.length==1 && subcategories[0]=="")){
     res.send({products:filteredProductsSub});
   }
   else{
