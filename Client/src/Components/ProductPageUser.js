@@ -172,11 +172,12 @@ class ProductPageUser extends React.Component{
             .then(res => res.json())
             .then(res => {
                 console.log(res);
+                alert("Η αλλαγή έγινε με επιτυχία.");
             //  this.setState({products:res.products}, () =>{
                 //   console.log(res);
                 
             // });
-              location.reload();
+              //location.reload();
               
             });
         });
