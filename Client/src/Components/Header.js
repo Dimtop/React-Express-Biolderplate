@@ -51,7 +51,7 @@ class Header extends React.Component{
                             <nav id="header">
                                 <div className="nav-wrapper">
                                 <img  className="brand-logo" id="logo" src="/public/media/logo.png" />
-                                    <p data-target="mobile-demo" className="sidenav-trigger"><i style={{color:"black"}} className="material-icons">menu</i></p>
+                                    <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i style={{color:"black"}} className="material-icons">menu</i></a>
                                     <ul className="right hide-on-med-and-down">
                                     <li><a href="/" className="menuItem" onClick={this.clearCookies}>Logout</a></li>
                                     <li><a href="/dashboard" className="menuItem">Dashboard</a></li>
